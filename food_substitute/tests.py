@@ -171,7 +171,7 @@ class IntegrationTests(StaticLiveServerTestCase):
     def setUpClass(cls):
         super().setUpClass()
         cls.selenium = WebDriver()
-        cls.selenium.implicitly_wait(int(10))
+        cls.selenium.implicitly_wait(10)
 
     @classmethod
     def tearDownClass(cls):
