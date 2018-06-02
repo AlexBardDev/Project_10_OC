@@ -27,7 +27,7 @@ def home(request):
 def search(request, input_user):
     """This view searches a healthier substitute and shows the results."""
 
-    result = Food.objects.filter(name=input_user)
+    result = Food.objects.filter(name__icontains=input_user)
 
     if len(result) == 0:
         #Find some suggestions with a regex

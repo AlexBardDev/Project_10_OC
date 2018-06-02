@@ -23,8 +23,9 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = 'kom^8(b6kia#=n2$_g35r$n9h#$n&20c+c5d-0$rn*ls422x@#'
 
-ALLOWED_HOSTS = ["127.0.0.1"]
+ALLOWED_HOSTS = ["52.47.51.252"]
 
+DEBUG = True
 
 # Application definition
 
@@ -125,3 +126,9 @@ STATIC_URL = '/static/'
 #Login redirection
 LOGIN_URL = '/login/'
 
+#Static files settings
+PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
+STATIC_ROOT = os.path.join(PROJECT_ROOT, 'staticfiles')
+STATICFILES_DIRS = (
+	os.path.join(PROJECT_ROOT, 'static'),
+)
